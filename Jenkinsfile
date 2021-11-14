@@ -41,7 +41,11 @@ pipeline {
                }
            }
          }
-                                
+             post {
+        always {
+            emailext body: 'Stages success', recipientProviders: [[$class: 'zribisarahzribi@gmail.com'], [$class: 'RequesterRecipientProvider']], subject: 'Build'
+        }
+    }                   
 
       
 
