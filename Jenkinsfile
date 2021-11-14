@@ -41,11 +41,11 @@ pipeline {
                }
            }
          }
-             post {
-        always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-        }
-    }              
+             stage ('Email Notification') {
+steps {
+mail bcc: '', body: 'your pipeline is building', cc: '', from: '', replyTo: '', subject: 'Build', to: 'zribisarahzribi@gmail.com'
+}
+}     
 
       
 
