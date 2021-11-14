@@ -1,7 +1,5 @@
 ---
 # tasks file for build
----
-#buildproject
              - name: build app
-               command: ng build --prod
+               shell: ng build --prod
                
